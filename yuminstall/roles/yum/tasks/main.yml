@@ -1,7 +1,7 @@
 - name: yum
   yum:
     name: "{{ item }}"
-    state: last
+    state: present
   with_items:
     - mc
     - lsof
