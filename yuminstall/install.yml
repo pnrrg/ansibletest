@@ -1,7 +1,11 @@
 ---
 - name: Install
   hosts: all
-  remote_user: root
-
-  roles:
-    - yum
+  tasks:
+  - name: yum
+    yum:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - mc
+      - lsof
