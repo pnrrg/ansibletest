@@ -1,0 +1,2 @@
+- name: Install lsof
+  yum: name=lsof state=present
