@@ -1,11 +1,10 @@
 ---
-- name: Install
+- name: Install mc, lsof
   hosts: all
-  tasks:
-  - name: yum
-    yum:
-      name: "{{ item }}"
-      state: present
-    with_items:
-      - mc
-      - lsof
+  remote_user: root
+  # remote_user: user
+  # become: yes
+  # become_method: sudo
+
+  roles:
+    - yum
