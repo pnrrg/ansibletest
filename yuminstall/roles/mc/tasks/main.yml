@@ -1,2 +1,2 @@
-- name: Install lsof
-  yum: name=lsof state=present
+- name: Install mc
+  yum: name=mc state=present
